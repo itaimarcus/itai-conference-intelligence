@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Mobile-first shell: portrait always uses bottom tabs, no sidebar */
+.app-shell--mobile .app-shell-main {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.app-shell--desktop .app-shell-main {
+  padding-bottom: 1.5rem;
+}
+
+@media (orientation: portrait) {
+  .app-shell {
+    flex-direction: column !important;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .app-shell--desktop {
+    flex-direction: row !important;
+  }
+}
+
+/* ICP slider: larger touch target on phones */
+.icp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 9999px;
+  background: currentColor;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.2);
+}
+
+.icp-range::-moz-range-thumb {
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 9999px;
+  background: currentColor;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.2);
+}

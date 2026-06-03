@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "itai-conference-intelligence-repo",
+  "scripts": {
+    "vercel-build": "npm ci --prefix itai-conference-intel && npm run build --prefix itai-conference-intel"
+  }
+}

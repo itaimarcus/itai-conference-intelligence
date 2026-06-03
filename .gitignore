@@ -1,0 +1,29 @@
+# Dependencies & build
+itai-conference-intel/node_modules/
+itai-conference-intel/.next/
+itai-conference-intel/out/
+itai-conference-intel/*.tsbuildinfo
+
+# Secrets & local env (never commit)
+.env
+.env.*
+!.env.example
+itai-conference-intel/.env
+itai-conference-intel/.env.*
+!itai-conference-intel/.env.example
+
+# Vercel link metadata (contains project/org ids)
+itai-conference-intel/.vercel/
+.vercel/
+
+# OS / editor / agent tooling
+.DS_Store
+Thumbs.db
+*.log
+.cursor/
+AGENTS.md
+CLAUDE.md
+
+# Legacy empty folders at repo root only
+/data/
+/src/

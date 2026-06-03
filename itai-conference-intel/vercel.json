@@ -1,0 +1,21 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "grain-conference-intel.vercel.app" }],
+      "destination": "https://itailligenceconference.vercel.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "grain-conference-intel-itaimarcus123-4621s-projects.vercel.app"
+        }
+      ],
+      "destination": "https://itailligenceconference.vercel.app/:path*",
+      "permanent": true
+    }
+  ]
+}
